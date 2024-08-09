@@ -1,0 +1,96 @@
+\documentclass{Math_Note}
+
+\title{Group Theory}
+\author{Buce-Ithon}
+\newdateformat{mydate}{\twodigit{\THEDAY}{ }\shortmonthname[\THEMONTH], \THEYEAR}
+\date{\today}
+
+\begin{document}
+% Title page
+\maketitle
+
+% Content
+\newpage
+\tableofcontents
+\newpage
+
+% Surface-figure
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.24]{"./Figures/Elma.png"}
+    \caption{Beautiful Algebra To My Elma}
+\end{figure}
+
+% Chap0-Introduction
+\setcounter{section}{-1}
+\newpage
+\section{What is Group?-Introduction to Group}
+\textcolor{softcyan}{Accoding to Chiniese Wikipeida:} \\
+\marginpar{\textcolor{cyan}{core of Group}}
+In mathematics, the \textbf{Group} is a special \textcolor{lightblue}{set} equiped a \textcolor{lightblue}{binary operation}, (the operation) 
+which has \textcolor{lightblue}{associativity}, \textcolor{lightblue}{identity} and \textcolor{lightblue}{inverse element}. \\
+\newline
+Since lots of mathematical structure are all groups (for instance: the integer system equiped with addition forms a Group), therefore, 
+common results can be succinctly summarized from different mathematical structures, which makes groups a core concept in contemporary mathematics. \\
+\newline
+\textcolor{softcyan}{The unilateral (left) definition of Group (weak definition) is below:} \\
+\marginpar{\textcolor{cyan}{simplest definition of the Group}}
+If a given \textcolor{lightblue}{set} $G$, and it's equiped \textcolor{lightblue}{binary operation} $\circ$: $G\times G\rightarrow G$ satisfying 
+(the result of operation $\circ\left(a,b\right)$ is simplified as $a\circ b$): \\
+%\begin{table}[H]
+%    \begin{center}
+%        %\renewcommand\arraystretch{1.2}
+%        \begin{tabular}{|c|l|l|} %option >{\columncolor[HTML]{F8F4FF}} adding before 'c,l' sets column color
+%            \hline
+%            \textcolor{lightblue}{Associativity} & \multicolumn{2}{l|}{$\forall g_{1}, g_{2},g_{3}\in G$, we have $\left(g_{1}\circ g_{2}\right)\circ g_{3}=g_{1}\circ\left(g_{2}\circ g_{3}\right)$} \\ \hline
+%            \multirow{2}{*}{\makecell{(L)\textcolor{lightblue}{Identity}\\ \& (L)\textcolor{lightblue}{Inverse}}} & \multirow{2}{*}{$\exists e\in G, \forall g\in G$, we have} & $e\circ g=g$ \\ \cline{3-3}
+%             & & and exists $\gamma\in G$, s.t. $\gamma\circ g=e$ \\ \hline
+%        \end{tabular}
+%    \end{center}
+%\end{table}
+%%\textcolor{wikitable1}{This is wikitable1 colored texts.} %wikitable1: \definecolor{wikitable1}{HTML}{F8F4FF}
+%%\textcolor{wikitable2}{This is wikitable2 colored texts.} %wikitable2: \definecolor{wikitable2}{HTML}{D0E2FF}
+\begin{table}[H]
+    \begin{center}
+        %\renewcommand\arraystretch{1.2}
+        \begin{tabular}{|>{\columncolor[HTML]{F8F4FF}}c|>{\columncolor[HTML]{F8F4FF}}l|>{\columncolor[HTML]{F8F4FF}}l|} %option >{\columncolor[HTML]{F8F4FF}} adding before 'c,l' sets column color
+            \hline
+            \rowcolor{wikitable1} \textcolor{lightblue}{Associativity} & \multicolumn{2}{l|}{$\forall g_{1}, g_{2},g_{3}\in G$, we have $\left(g_{1}\circ g_{2}\right)\circ g_{3}=g_{1}\circ\left(g_{2}\circ g_{3}\right)$} \\ \hline
+             & & $e\circ g=g$ \\ \cline{3-3}
+            \multirow{-2}{*}{\makecell{(L)\textcolor{lightblue}{Identity}\\ \& (L)\textcolor{lightblue}{Inverse}}} & \multirow{-2}{*}{$\exists e\in G, \forall g\in G$, we have} & and exists $\gamma\in G$, s.t. $\gamma\circ g=e$ \\ \hline
+        \end{tabular}
+    \end{center}
+\end{table}
+%\textcolor{wikitable1}{This is wikitable1 colored texts.} %wikitable1: \definecolor{wikitable1}{HTML}{F8F4FF}
+%\textcolor{wikitable3}{This is wikitable3 colored texts.} %wikitable3: \definecolor{wikitable3}{HTML}{D0E2FF}
+then we say $\left(G,\circ\right)$ is a \textbf{Group}. If $\circ$ is understood, $\left(G,\circ\right)$ is simplified as $G$. \\
+\newline
+The order of group operations is very important, i.e $a\cdot b=b\cdot a$(commutative) doesn't necessarily hold. \\
+A group satisfies the commutative law is called \textcolor{lightblue}{Commutative Group} (or \textcolor{lightblue}{Abelian Group} named after Niels$\cdot$Abel), those doesn't satisfy 
+is called \textcolor{lightblue}{Non-commutative Group} (\textcolor{lightblue}{Non-Abelian Group}). (For instance: The Dihedra Group (appearing next chapter) is a Non-Abelian Group.) \\
+\newline
+\textcolor{softcyan}{Equivalance definition of Group: unilateral (right) definition of Group (strong definition) is below:}
+\marginpar{\textcolor{cyan}{equivalance and full definition}}
+The above definition part of identity and inverse can also be changed to: 
+\begin{table}[H]
+    \begin{center}
+        \begin{tabular}{|c|l|l|}
+            \hline
+            \rowcolor{wikitable2} & & $g\circ e=g$ \\ \cline{3-3}
+            \rowcolor{wikitable2} \multirow{-2}{*}{\makecell{\textcolor{lightblue}{Identity}(R)\\ \& \textcolor{lightblue}{Inverse}(R)}} & \multirow{-2}{*}{$\exists e\in G, \forall g\in G$, we have} & and exists $\gamma\in G$, s.t. $g\circ\gamma=e$ \\ \hline
+        \end{tabular}
+    \end{center}
+\end{table}
+Because no matter the original definition of lavender or the alternative definition of light-yellow, combined with the associativity, it's equivalent to the following definition: 
+\begin{table}[H]
+    \begin{center}
+        \begin{tabular}{|c|l|l|}
+            \hline
+            \rowcolor{wikitable3} & & $e\circ g=g\circ e=g$ \\ \cline{3-3}
+            \rowcolor{wikitable3} \multirow{-2}{*}{\makecell{\textcolor{lightblue}{Identity}\\ \& \textcolor{lightblue}{Inverse}}} & \multirow{-2}{*}{\makecell{$\exists e\in G, \forall g\in G$, then\\ we have}} & and exists $\gamma\in G$, s.t. $\gamma\circ g=g\circ\gamma=e$ \\ \hline
+        \end{tabular}
+    \end{center}
+\end{table}
+\textcolor{softcyan}{Ohh! Please remenber the definitions above, because this is the most concise definition of Group. And it will be very helpful for us to understand Group Theory!}
+
+\end{document}
