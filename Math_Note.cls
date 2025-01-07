@@ -26,17 +26,20 @@
 \definecolor{blue}{RGB}{0,0,255}
 \definecolor{lightblue}{RGB}{26,115,232} %from Chrome Tab-goup
 \definecolor{cyan}{RGB}{0,255,255}
+\definecolor{skycyan}{RGB}{0,207,255}
 \definecolor{softcyan}{RGB}{54,218,196}
 \definecolor{black}{RGB}{0,0,0}
 \definecolor{wikitable1}{HTML}{F8F4FF}
 \definecolor{wikitable2}{HTML}{FFFFE0}
 \definecolor{wikitable3}{HTML}{D0E2FF}
 
-\newtheorem*{prb}{Problem}
+\newtheorem{prb}{Problem}
 \newtheorem{thm}{Theorem}[section]
 \newtheorem{df}{Definition}[section]
 \newtheorem{intro}{Introduction}[section]
 \newtheorem{ex}{Example}[section]
+\newtheorem*{prb*}{Problem}
+\newtheorem*{ex*}{Example}
 \newtheorem*{sol}{\hskip 2em Solution}
 \newtheorem*{pf}{\hskip 2em Proof} %Proof within the paragraph, indent the first line by 2 characters
 %\newtheorem*{prf}{Proof} %Formal Proof, without indents.
